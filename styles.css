@@ -1,3 +1,4 @@
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@ body, html {
     height: 100%;
 }
 
+/* Header */
 header {
     position: relative;
     width: 100%;
@@ -86,7 +88,7 @@ video {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Main */
+/* Main Styles */
 h1 {
     text-align: center;
 }
@@ -95,21 +97,22 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-s{
+
+s {
     color: red;
 }
 
 .deals {
-    background-color: #fefae0
+    background-color: #fefae0;
 }
 
 .new-arrivals {
-    background-color:#fefae0
+    background-color: #fefae0;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 20px auto;
     max-width: 1200px;
@@ -142,7 +145,7 @@ s{
 }
 
 .product-card button {
-    background:#697565;
+    background: #697565;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -153,7 +156,6 @@ s{
     background: #098ea8; /* Darker shade for hover effect */
     transform: scale(1.05); /* Slightly enlarge button on hover */
 }
-
 
 /* Footer */
 footer {
@@ -211,5 +213,62 @@ footer {
 }
 
 .footer-social a:hover {
-    color: #0cc5e5
+    color: #0cc5e5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 300px; /* Adjust header height for smaller screens */
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .content {
+        top: 60%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container div {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content p {
+        font-size: 0.875rem;
+    }
+
+    .product-card p {
+        font-size: 18px;
+    }
 }
